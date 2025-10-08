@@ -96,7 +96,12 @@ export default function Hero() {
             Minimal
           </Box>
         </Typography>
-        <Typography sx={{ mt: 3 }} color={grey[800]} variant="body1" component="p">
+        <Typography
+          sx={{ mt: 3 }}
+          color={grey[800]}
+          variant="body1"
+          component="p"
+        >
           The starting point for your next project is based on MUI. <br />
           Easy customization helps you build apps faster and better.
         </Typography>
@@ -147,16 +152,26 @@ export default function Hero() {
             </Link>
           </Button>
           <Button
-            variant="outlined"
+            onClick={() => navigate("/task4")}
             sx={{
-              color: "black",
-              border: "1px solid black",
+              background: "black",
+              color: "white",
               paddingX: "15px",
-              paddingY: "7px",
+              paddingY: "8px",
             }}
+            variant="outlined"
           >
-            {" "}
-            <AcUnitIcon sx={{ color: "black" }} /> Figma preview
+            <Link
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <BoltIcon sx={{ mr: 1 }} />
+              Click me to go to Register Task
+            </Link>
           </Button>
         </Stack>
         <Stack
